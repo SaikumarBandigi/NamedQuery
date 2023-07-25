@@ -1,4 +1,4 @@
-package com.nareshit.collections.model;
+package com.sonu.collections.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

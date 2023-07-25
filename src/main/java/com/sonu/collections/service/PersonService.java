@@ -1,18 +1,17 @@
-package com.nareshit.collections.service;
+package com.sonu.collections.service;
 
 import java.util.Date;
 import java.util.List;
 
-import com.nareshit.collections.model.Publisher;
+import com.sonu.collections.dao.BookDao;
+import com.sonu.collections.dao.EmployeeDao;
+import com.sonu.collections.model.Employee;
+import com.sonu.collections.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.nareshit.collections.dao.BookDao;
-import com.nareshit.collections.dao.EmployeeDao;
-import com.nareshit.collections.dao.PersonDao;
-import com.nareshit.collections.model.Book;
-import com.nareshit.collections.model.Employee;
-import com.nareshit.collections.model.Person;
+import com.sonu.collections.dao.PersonDao;
+import com.sonu.collections.model.Book;
 
 @Service
 public class PersonService {

@@ -1,10 +1,9 @@
-package com.nareshit.collections.dao;
+package com.sonu.collections.dao;
 
-import com.nareshit.collections.model.Publisher;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.nareshit.collections.model.Book;
+import com.sonu.collections.model.Book;
 
 @Repository
 public interface BookDao extends CrudRepository<Book, Integer> {

@@ -1,4 +1,4 @@
-package com.nareshit.collections;
+package com.sonu.collections;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,11 +13,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.nareshit.collections.model.Book;
-import com.nareshit.collections.model.Employee;
-import com.nareshit.collections.model.Person;
-import com.nareshit.collections.model.Publisher;
-import com.nareshit.collections.service.PersonService;
+import com.sonu.collections.model.Book;
+import com.sonu.collections.model.Employee;
+import com.sonu.collections.model.Person;
+import com.sonu.collections.model.Publisher;
+import com.sonu.collections.service.PersonService;
 
 @SpringBootApplication
 public class CollectionsUsingSBootApplication implements CommandLineRunner {

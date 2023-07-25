@@ -1,12 +1,11 @@
-package com.nareshit.collections.dao;
+package com.sonu.collections.dao;
 
 import java.util.Date;
 import java.util.List;
 
+import com.sonu.collections.model.Person;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-
-import com.nareshit.collections.model.Person;
 
 @Repository
 public interface PersonDao extends CrudRepository<Person, Integer> {
