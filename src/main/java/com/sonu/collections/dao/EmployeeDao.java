@@ -9,10 +9,16 @@ import com.sonu.collections.model.Employee;
 
 @Repository
 public interface EmployeeDao extends CrudRepository<Employee, Integer> {
-	
-	
-	//Named Query
-	
-	public List<Object[]> getMaxSalaryByDept(List<String> deptNames);
+
+
+    //Named Query
+
+    List<Object[]> getMaxSalaryByDept(List<String> deptNames);
+
+    List<Object[]> getDeptAndSalWhoseSalIsGreaterThanProvided(Integer salary);
+
+
+    Object[] getDeptAndSalWhoseSalIsGreaterThanProvidedAnotherWay(Integer salary);
+
 
 }

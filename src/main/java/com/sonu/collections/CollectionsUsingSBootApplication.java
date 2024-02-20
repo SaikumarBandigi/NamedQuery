@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
+import java.util.function.Consumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -32,27 +33,32 @@ public class CollectionsUsingSBootApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        // createPersons();
+        //  createPersons();
         // getPersonByIds();
-       // getAllPersons();
+        // getAllPersons();
 
-       // findByLastNameOrFirstName();
-       // findByLastNameAndFirstName();
+        // findByLastNameOrFirstName();
+        // findByLastNameAndFirstName();
 
-        findByLastNameOrderByCreatedDateDesc();
+        //  findByLastNameOrderByCreatedDateDesc();
         //findByAgeLessThanEqual();
         //findByFirstNameLike();
         //findByLastNameAndAgeLessThanEqual();
         //findByCreatedDateBetween();
         //giveDataByLastName();
 
+        ///////////////////////////////////////////////////////////////////////////////
+
+
         // saveBookPublishers();
         //findByBookName();
         //retireveByBookName();
         // retireveBookById();
-        //createEmployees();
-        //getMaxSalaryByDept();
+        //  createEmployees();
+        // getMaxSalaryByDept();
         //giveFewcolumns();
+       // getDeptAndSalWhoseSalIsGreaterThanProvided();
+        getDeptAndSalWhoseSalIsGreaterThanProvidedAnotherWay();
     }
 
 
@@ -85,13 +91,21 @@ public class CollectionsUsingSBootApplication implements CommandLineRunner {
 
 
     private void getMaxSalaryByDept() {
+        List<Object[]> list = personService.getMaxSalaryByDept(Arrays.asList("Admin", "IT", "HR", "Sale"));
+        // Consumer<Object[]> consumer = objects -> System.out.println(Arrays.toString(objects));
 
-        List<Object[]> list = personService.getMaxSalaryByDept(
-                Arrays.asList("Admin", "IT", "HR"));
-        list.forEach(arr -> {
-                    System.out.println(Arrays.toString(arr));
-                }
-        );
+        list.forEach(arr -> System.out.println(Arrays.toString(arr)));
+    }
+
+    private void getDeptAndSalWhoseSalIsGreaterThanProvided() {
+        List<Object[]> list = personService.getDeptAndSalWhoseSalIsGreaterThanProvided(50000);
+        list.forEach(objects -> System.out.println(Arrays.toString(objects)));
+    }
+
+
+    private void getDeptAndSalWhoseSalIsGreaterThanProvidedAnotherWay() {
+        Object[] list = personService.getDeptAndSalWhoseSalIsGreaterThanProvidedAnotherWay(50000);
+            System.out.println(Arrays.toString(list));
     }
 
 

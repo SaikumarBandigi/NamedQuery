@@ -43,6 +43,15 @@ public class PersonService {
         return empDao.getMaxSalaryByDept(deptNames);
     }
 
+    public List<Object[]> getDeptAndSalWhoseSalIsGreaterThanProvided(Integer salary) {
+        return empDao.getDeptAndSalWhoseSalIsGreaterThanProvided(salary);
+    }
+
+
+    public Object[] getDeptAndSalWhoseSalIsGreaterThanProvidedAnotherWay(Integer salary) {
+        return empDao.getDeptAndSalWhoseSalIsGreaterThanProvidedAnotherWay(salary);
+    }
+
     public Iterable<Book> retireveByBookName(String bookName) {
         return bookDao.retireveByBookName(bookName);
     }
